@@ -143,14 +143,14 @@ public class ProductDAO {
 		Connection con = DBConnection.getConnection();
 		
 		String sql = "INSERT INTO PRODUCT (PRODUCTNUM, PRODUCTNAME, PRODUCTDETAIL, PRODUCTJUMSU) "
-				+ "VALUES (?, ?, ?, 0.0)";
+				+ "VALUES (?, ?, ?, ?)";
 		
 		PreparedStatement st = con.prepareStatement(sql);
 		
 		st.setLong(1, productDTO.getProductNum());
 		st.setString(2, productDTO.getProductName());
 		st.setString(3, productDTO.getProductDetail());
-		//st.setDouble(3, productDTO.getProductJumsu());
+		st.setDouble(4, productDTO.getProductJumsu());
 		
 		int result = st.executeUpdate();
 		
