@@ -11,7 +11,7 @@ public class MemberService {
 	
 	public int memberJoin(MemberDTO memberDTO) throws Exception {
 		
-		memberDTO.setId("jhy6");
+		memberDTO.setId("jhy5");
 		memberDTO.setPw("1111");
 		memberDTO.setName("장하영");
 		memberDTO.setPhone("010-2222-2222");
