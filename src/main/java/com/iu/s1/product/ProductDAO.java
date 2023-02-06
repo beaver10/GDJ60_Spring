@@ -25,19 +25,7 @@ public class ProductDAO {
 	//delete--------------------------------------------------------------------
 	public int setProductDelete(Long productNum)throws Exception{
 		
-		Connection con = DBConnection.getConnection();
-		
-		String sql = "DELETE PRODUCT WHERE PRODUCTNUM =?";
-		
-		PreparedStatement st = con.prepareStatement(sql);
-		
-		st.setLong(1, productNum);
-		
-		int resulut = st.executeUpdate();
-
-		DBConnection.disConnect(st, con);
-		
-		return resulut;
+		return sqlSession.delete(NAMESPACE+"setProductDelete", productNum);
 	}
 	
 	

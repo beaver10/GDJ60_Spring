@@ -7,20 +7,25 @@
   <mapper namespace="com.iu.s1.product.ProductDAO">
   
   <!-- id는 사용하려는 매서드 이름 -->
-  <select id="getProductList" resultType="com.iu.s1.product.ProductDTO" >
+  <select id="getProductList" resultType="ProductDTO" >
     SELECT PRODUCTNUM, PRODUCTNAME, PRODUCTJUMSU
   	FROM PRODUCT 
   	ORDER BY PRODUCTNUM DESC
   </select>
   
-  <select id="getProductDetail" parameterType="com.iu.s1.product.ProductDTO" resultType="com.iu.s1.product.ProductDTO">
+  <select id="getProductDetail" parameterType="ProductDTO" resultType="ProductDTO">
  	SELECT * FROM PRODUCT WHERE PRODUCTNUM=#{productNum}
   </select>
   
-  <insert id="setAddProduct" parameterType="com.iu.s1.product.ProductDTO" >
+  <insert id="setAddProduct" parameterType="ProductDTO" >
   	INSERT INTO PRODUCT (PRODUCTNUM, PRODUCTNAME, PRODUCTDETAIL, PRODUCTJUMSU) 
   	VALUES (#{productNum}, #{productName}, #{productDetail}, 0.0)
   </insert>
+  
+  <delete id="setProductDelete" parameterType="Long">
+ 	<!-- =#{넘겨주는변수명} -->
+  	DELETE PRODUCT WHERE PRODUCTNUM = #{productNum}
+  </delete>
   
   
   </mapper>
