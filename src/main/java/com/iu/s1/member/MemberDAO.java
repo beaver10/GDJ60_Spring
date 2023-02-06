@@ -59,32 +59,5 @@ public class MemberDAO {
 		
 	}
 	
-	//배포전 삭제
-	public static void main(String[] args) {
-		
-		MemberDAO memberDAO = new MemberDAO();
-		MemberDTO memberDTO = new MemberDTO();
-		memberDTO.setId("11");
-		memberDTO.setPw("11");
-		memberDTO.setName("11");
-		memberDTO.setPhone("11");
-		memberDTO.setEmail("11");
-		memberDTO.setAddress("11");
-		
-		
-		
-		
-		
-		try {
-			int result = memberDAO.setAddMember(memberDTO);
-			System.out.println(result == 1);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-	}
-	
-	
 
 }

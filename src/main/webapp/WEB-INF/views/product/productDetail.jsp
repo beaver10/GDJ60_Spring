@@ -1,6 +1,6 @@
 <%@page import="com.iu.s1.product.ProductDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,5 +18,6 @@
 	<h3>${requestScope.dto.productName}</h3>
 	<h3>${dto.getProductDetail()}</h3>
 	<h3>${dto.productJumsu*dto.productNum}</h3>
+	<a class="btn btn-danger" href="./list">상품 목록</a>
 </body>
 </html>
