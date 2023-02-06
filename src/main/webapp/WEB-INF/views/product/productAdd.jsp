@@ -12,7 +12,7 @@
 		<form action="./productAdd" method="post">
 			상품명 : <input type = "text" name="productName" value="test" ><br>
 			상품정보 : <textarea name="productDetail" rows="" cols=""></textarea><br>
-			상품평점 : <input type ="number" name="productJumsu" >
+			상품평점 : <input type ="number" name="productScore" >
 			<button type="submit">전송</button><br>
 		
 		</form>

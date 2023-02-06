@@ -36,12 +36,12 @@ public class ProductDAO {
 		
 		Connection con = DBConnection.getConnection();
 		
-		String sql = "SELECT PRODUCT_SEQ.NEXTVAL M FROM DUAL";
+		String sql = "SELECT PRODUCTNUM_SEQ.NEXTVAL FROM DUAL";
 		PreparedStatement st = con.prepareStatement(sql);
 		ResultSet rs = st.executeQuery();
 		
 		rs.next();
-		Long num = rs.getLong("M");
+		Long num = rs.getLong(1);
 		
 		DBConnection.disConnect(st, con, rs);
 		

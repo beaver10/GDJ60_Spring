@@ -17,7 +17,7 @@
 	<!-- EL 방식 (앞으로 이렇게 작성)-->
 	<h3>${requestScope.dto.productName}</h3>
 	<h3>${dto.getProductDetail()}</h3>
-	<h3>${dto.productJumsu*dto.productNum}</h3>
+	<h3>${dto.productScore*dto.productNum}</h3>
 	<a class="btn btn-danger" href="./list">상품 목록</a>
 </body>
 </html>

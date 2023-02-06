@@ -4,10 +4,10 @@ public class MemberDTO {
 	
 	private String id;
 	private String pw;
-	private String name;
-	private String phone;
+	private String memberName;
+	private String memberPhone;
 	private String email;
-	private String address;
+
 	
 	
 	public String getId() {
@@ -22,29 +22,23 @@ public class MemberDTO {
 	public void setPw(String pw) {
 		this.pw = pw;
 	}
-	public String getName() {
-		return name;
+	public String getMemberName() {
+		return memberName;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setMemberName(String memberName) {
+		this.memberName = memberName;
 	}
-	public String getPhone() {
-		return phone;
+	public String getMemberPhone() {
+		return memberPhone;
 	}
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setMemberPhone(String memberPhone) {
+		this.memberPhone = memberPhone;
 	}
 	public String getEmail() {
 		return email;
 	}
 	public void setEmail(String email) {
 		this.email = email;
-	}
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
 	}
 	
 	

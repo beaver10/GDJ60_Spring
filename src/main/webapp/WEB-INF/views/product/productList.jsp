@@ -25,7 +25,7 @@
 				<tr>
 					<td><a href="./detail?productNum=${dto.productNum}"> ${pageScope.dto.productNum}</a></td>	
 					<td>${dto.productName}</td>
-					<td>${dto.productJumsu}</td>
+					<td>${dto.productScore}</td>
 				</tr>
 			</c:forEach>
 		</tbody>

@@ -3,6 +3,7 @@ package com.iu.s1.member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -15,7 +16,7 @@ public class MemberController {
 
 
 	
-	@RequestMapping (value = "join")
+	@RequestMapping (value = "memberJoin", method = RequestMethod.POST)
 	public String memberJoin(MemberDTO memberDTO) {
 		System.out.println("member join 입니다");
 		try {
@@ -27,6 +28,16 @@ public class MemberController {
 		}
 		return "member/memberJoin";
 	}
+	
+	
+	@RequestMapping (value = "memberJoin", method = RequestMethod.GET)
+	public void memberJoin() {
+		System.out.println("member join입니다");
+		
+	}
+	
+	
+	
 	
 	@RequestMapping(value = "memberLogin")
 	public void memberLogin() {
