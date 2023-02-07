@@ -54,16 +54,15 @@ public class ProductController {
 	
 	//입력 페이지 이동
 	@RequestMapping(value = "productAdd", method = RequestMethod.GET)
-	public void productAdd() {
+	public void setProductAdd() {
 		System.out.println("product add 입니다");
 		//url 경로와 jps 경로가 같으면 void로 둬도 리턴 알아서 해줌
 	}
 	
 	//입력 페이지 데이터 받는 메서드
 	@RequestMapping(value = "productAdd", method = RequestMethod.POST)
-	public String productAdd(ProductDTO productDTO) throws Exception {
-		int result = productService.setAddProduct(productDTO, null);
-		System.out.println(result ==1);
+	public String setProductAdd(ProductDTO productDTO) throws Exception {
+		productService.setProductAdd(productDTO, null);
 		return "redirect:./list";
 	}
 	
