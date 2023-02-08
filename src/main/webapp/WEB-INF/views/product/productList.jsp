@@ -20,7 +20,6 @@
 		</thead>
 		
 		<tbody>
-		
 			<c:forEach items="${list}" var="dto"> <!-- dtoList는 page영역에 담김 -->
 				<tr>
 					<td><a href="./detail?productNum=${dto.productNum}"> ${pageScope.dto.productNum}</a></td>	

@@ -8,8 +8,25 @@
   <select id="getBankbookList" resultType="BankbookDTO">
   SELECT BOOKNUMBER, BOOKNAME, BOOKRATE, BOOKSALE, BOOKDETAIL
   FROM BANKBOOK
-  </select>
 
+  </select>
   
+  <select id="getBankbookDetail" parameterType="BankbookDTO" resultType="BankbookDTO">
+  SELECT * FROM BANKBOOK WHERE BOOKNUMBER=#{bookNumber}
+  </select>
+  
+  <insert id="setBankbookAdd">
+  INSERT INTO BANKBOOK 
+  VALUES (BANKNUM_SEQ.NEXTVAL, #{bookName}, #{bookRate}, #{bookSale}, #{bookDetail})
+  </insert>
+
+  <delete id="setBankbookDelete" parameterType="BankbookDTO">
+  DELETE BANKBOOK WHERE BOOKNUMBER = #{bookNumber}
+  </delete>
+  
+  <update id="setBankbookUpdate" parameterType="BankbookDTO">
+  UPDATE BANKBOOK SET BOOKNAME=#{bookName}, BOOKRATE =#{bookRate}, BOOKDETAIL =#{bookDetail}, BOOKSALE =#{bookSale}
+  WHERE BOOKNUMBER =#{bookNumber}
+  </update>
   
   </mapper>
