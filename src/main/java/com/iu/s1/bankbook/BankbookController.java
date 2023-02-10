@@ -25,7 +25,6 @@ public class BankbookController {
 		mv.setViewName("bankbook/list");
 		mv.addObject("list", ar);
 		return mv;
-		
 	}
 	
 	//detail

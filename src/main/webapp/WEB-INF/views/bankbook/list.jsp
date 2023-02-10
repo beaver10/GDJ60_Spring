@@ -6,10 +6,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="../../../resources/table.css">
 </head>
 <body>
 	<h1>Bankbook List Page</h1>
-	<table border="1">
+	<table class="tbl2">
 		<thead>
 			<tr>
 				<th>상품명</th>
@@ -23,7 +24,7 @@
 				<tr>
 					<td><a href="./detail?bookNumber=${dto.bookNumber}">${dto.bookName}</a> </td>
 					<td>${pageScope.dto.bookRate}</td>
-					<td>
+					<td class="tbl_td">
 						<c:choose>
 							<c:when test="${dto.bookSale eq 1 }">판매중</c:when>
 							<c:otherwise>판매중단</c:otherwise>

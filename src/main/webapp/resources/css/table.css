@@ -1,0 +1,79 @@
+
+/* table의 부모는 <body> */
+.tbl {
+    
+    width: 70%; /*<body>의 70%*/
+    height: 70%;
+    margin: 0px auto;
+    border: 1x solid black;
+    border-spacing: 10px;
+    border-collapse: collapse;
+}
+
+.tbl th, .tbl td{
+    border: 1px solid black;
+    height: 40px;
+    
+}
+.tbl th{
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.tbl a{
+    color: black;
+    text-decoration-line: none;
+}
+
+
+/* <h1>은 넓이가 100%로 되어있어서 width 조정해줘야함 
+auto로 조정하려면 조정하려는 구간의 여유 공간이 있어야한다*/
+.title {
+    width: 30%;
+    margin: 0 auto;
+}
+
+/* display inline은 block 태그로 (여기선 <div>) 감싸서 적용시켜야함 
+inline은 자체적으로 이동은 되지않는다!!*/
+.image {
+    width: 70%;
+    height: 70%;
+    margin: 0 auto;
+    
+}
+
+
+/* *************************************************** */
+/* tbl2로 작업 */
+
+.tbl2 {
+    width: 70%;
+    margin: 0 auto;
+    border-spacing: 0px ;
+    border-collapse: collapse;
+}
+
+.tbl2 th{
+    color: white;
+    background-color: black;
+}
+
+.tbl2 td{
+    border-bottom: 1px black solid;   
+    border-width: 1px; 
+    height: 30px;
+
+    /* border-spacing: 10px;
+    border-collapse: collapse; */
+}
+
+.tbl2 th, .tbl2 td{
+    border-right: 3px solid white; 
+    
+}
+
+.tbl2 a{
+    color: black;
+    text-decoration-line: none;
+}

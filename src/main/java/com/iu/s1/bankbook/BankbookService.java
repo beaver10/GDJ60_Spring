@@ -23,13 +23,13 @@ public class BankbookService {
 		return bankbookDAO.setBankbookAdd(bankbookDTO);
 	}
 	
-	public int setBankbookUpdate(BankbookDTO bankbookDTO)throws Exception{
-		return bankbookDAO.setBankbookUpdate(bankbookDTO);
-	}
 	
 	public int setBankbookDelete(BankbookDTO bankbookDTO)throws Exception{
 		return bankbookDAO.setBankbookDelete(bankbookDTO);
 	}
 
+	public int setBankbookUpdate(BankbookDTO bankbookDTO)throws Exception{
+		return bankbookDAO.setBankbookUpdate(bankbookDTO);
+	}
 
 }

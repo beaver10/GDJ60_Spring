@@ -1,0 +1,58 @@
+
+.d1{
+    appearance: calc();
+    writing-mode: sideways-lr !important;
+    font-style: italic ;
+    font-variant-ligatures: no-historical-ligatures ;
+    font-variant-caps: all-small-caps ;
+    font-variant-numeric: lining-nums;
+    font-variant-east-asian: jis83;
+    font-weight: 600;
+    font-stretch: normal;
+    font-size: xx-large;
+    font-family: xx-large;
+    text-rendering: auto;
+    color: blueviolet;
+    letter-spacing: normal;
+    word-spacing: 1px;
+    line-height: 100px ;
+    text-transform: lowercase;
+    text-indent: 100px;
+    text-shadow: 50px;
+    display: inline-block;
+    text-align: end;
+    align-items: flex-end;
+    cursor: copy;
+    box-sizing: border-box;
+    background-color: blue;
+    margin: 10px;
+    padding: 1px 6px;
+    border-width: 10px;
+    border-style: ridge;
+    border-color: brown;
+    border-image: round;
+}
+
+.d2{
+    appearance: calc();
+    writing-mode: sideways-lr !important;
+    display: inline-block;
+    font-size: xx-large;
+    font-style: italic;
+    font-variant-caps: all-petite-caps;
+    color: tomato;
+    font-weight: bold;
+
+    border-color: teal;
+    border-radius: 3000px;
+    border-width: 10px;
+    background-color: yellow;
+    font-variant-ligatures: common-ligatures;
+
+}
+.d3{
+    appearance: calc();
+    background-origin: padding-box;
+    font-size: xx-small;
+    display: block;
+}

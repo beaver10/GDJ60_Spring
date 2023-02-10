@@ -11,6 +11,7 @@
 	<h1>Bankbook Update Page</h1>
 	<h3>
 	<form action="./update" method="post">
+	<input type="hidden" name="bookNumber" readonly value="${dto.bookNumber}"> <br>
 	상품명 : <input type="text" name="bookName" value="${dto.bookName}"> <br>
 	이자율 : <input type="text" name="bookRate" value="${dto.bookRate }"> <br>
 	설명 : <textarea rows="" cols="" name="bookDetail">${dto.bookDetail }</textarea><br>

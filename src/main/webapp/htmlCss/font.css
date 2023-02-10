@@ -1,0 +1,25 @@
+.f1{
+    /* em : 기존 폰트의 N배라는 뜻 */
+    font-size: 2em; 
+}
+
+.f1_1{
+    /* 자식폰트는 부모의 폰트 크기를 상속받는다 (f1안에 있는 폰트들) */
+    font-size: 2em;
+    font-weight: bold;
+    font-style: italic;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.f1_2{
+    width: 200px;
+    height: 100px;
+    /* rem : 디폴트 폰트 사이즈(16px)의 N배 */
+    font-size: 1.2rem;
+    font-weight: lighter;
+    font-style: oblique;
+    font-family: 'Nanum Pen Script', cursive;
+    border: 1px solid red;
+    text-align: center;
+    line-height: 100px;
+}

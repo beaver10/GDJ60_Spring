@@ -29,16 +29,16 @@ public class BankbookDAO {
 		return sqlSession.insert(NAMESPACE+"setBankbookAdd", bankbookDTO);
 	}
 	
-	//update
-	public int setBankbookUpdate(BankbookDTO bankbookDTO)throws Exception {
-		return sqlSession.update(NAMESPACE+"setBankbookUpdate", bankbookDTO);
-	}
 	
 	//delete
 	public int setBankbookDelete(BankbookDTO bankbookDTO) throws Exception{
 		return sqlSession.delete(NAMESPACE+"setBankbookDelete", bankbookDTO);
 	}
 	
+	//update
+	public int setBankbookUpdate(BankbookDTO bankbookDTO)throws Exception {
+		return sqlSession.update(NAMESPACE+"setBankbookUpdate", bankbookDTO);
+	}
 	
 
 }
