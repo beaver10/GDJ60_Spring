@@ -1,38 +1,45 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-	<link rel="stylesheet" href="/resources/css/main.css">
-	<link rel="stylesheet" href="/resources/css/reset.css">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html>
 <html>
-<head>
-	<title>Home</title>
-</head>
+   <head>
+      <title>Home</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <c:import url="./template/common_css.jsp"></c:import>
+      
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Paytone+One&display=swap" rel="stylesheet">
+   </head>
 <body>
-	<header>
-		<div class="header_wrap">
-			<div class="header_logo">
-				<img src="/resources/images/logo.png" alt="">
+<!-- 서버 내부 주소, 상대경로 -->
+   <c:import url="./template/header.jsp"></c:import>
+   
+  <div class="container-fluid my-5">
+	  <div class="row col-md-6 offset-md-3">
+		   <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+		  <div class="carousel-inner">
+		    <div class="carousel-item active">
+		      <img src="/resources/images/s1.jpg" class="d-block w-100" alt="...">
+		    </div>
+		    <div class="carousel-item">
+		      <img src="/resources/images/s2.jpg" class="d-block w-100" alt="...">
+		    </div>
+		    <div class="carousel-item">
+		      <img src="/resources/images/s3.jpg" class="d-block w-100" alt="...">
+		    </div>
+		  </div>
+		  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    <span class="visually-hidden">Previous</span>
+		  </button>
+		  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    <span class="visually-hidden">Next</span>
+		  </button>
 			</div>
-			<nav class="header_nav">
-				<ul>
-					<li><a href="#"> Notice</a></li>
-					<li><a href="#">Product</a></li>
-					<li><a href="#">Bankbook</a></li>
-					<li><a href="#">Etc</a></li>
-				</ul>
-			</nav>
-			
-				<div class="header_sub">
-					<ul>
-					<li><a href="#">LOGIN</a></li>
-					<li><a href="#">JOIN</a></li>
-					<li><a href="#">KO</a></li>
-					<li><a href="#">EN</a></li>
-					<li><a href="#">JP</a></li>
-					<li><a href="#">CN</a></li>
-				</ul>
-			</div>
-		</div>
-	</header>
+	</div>
+  </div>
+<c:import url="./template/common_js.jsp"></c:import>
 </body>
 </html>

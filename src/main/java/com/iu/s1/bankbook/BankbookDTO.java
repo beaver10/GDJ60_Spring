@@ -29,6 +29,9 @@ public class BankbookDTO {
 		this.bookRate = bookRate;
 	}
 	public Integer getBookSale() {
+		if(bookSale==null||bookSale!=1) {
+			this.bookSale=0;
+		}
 		return bookSale;
 	}
 	public void setBookSale(Integer bookSale) {

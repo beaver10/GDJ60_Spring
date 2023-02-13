@@ -7,19 +7,45 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+   <c:import url="../template/common_css.jsp"></c:import>
+      <link rel="stylesheet" href="/resources/css/table.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 <body>
-	<h1>Bankbook Add Page</h1>
-	<h3>
-	<form action="./add" method="post">
-		상품명 : <input type="text" name="bookName" placeholder="제품명 입력"> <br>
-		이자율 : <input type="text" name="bookRate" value="1.5"> <br>
-		설명 : <textarea rows="" cols="" name="bookDetail" placeholder="간단한 설명"></textarea><br>
-		판매여부 : <input type="text" name="bookSale" value="1"><br>
-	
-		<button type="submit">등록</button>
-		<button><a href="./list"> 리스트</a></button>
+  <c:import url="../template/header.jsp"></c:import>
+   <div class="container fluid my-5">
+   <div class= "row mb-4 ">
+   
+   
+	<h1 class="text-center mb-2 border-bottom border-warning">은행 상품 등록
+	<div class = "mb-3"></div>
+	</h1>
+	</div>
+	<form class = "row g-3 ms-auto" action="./add" method="post">
+		<div class ="col-md-6">
+			<label for="bookName" class="form-label">상품명</label>
+  			<input type="text" class="form-control" id="bookName" name="bookName">
+ 		</div>
+ 		<div class="col-md-5">
+    		<label for="bookRate" class="form-label">이자율</label>
+    		<input type="text" class="form-control" id="bookRate" name="bookRate">
+  		</div>
+  		<div class="col-11">
+    		<label for="bookDetail" class="form-label">상품 설명</label>
+    		<input type="text" class="form-control" id="bookDetail" name="bookDetail" placeholder="간단한 설명">
+  		</div>
+  		<div class="form-check form-switch ms-2 my-4">
+ 			<input class="form-check-input" type="checkbox" role="switch" id="bookSale" name="bookSale" value="1" checked>
+  			<label class="form-check-label" for="bookSale" >판매여부</label>
+		</div>
+
+	  <div class="col-12">
+	    <button type="submit" class="btn btn-primary">등록</button>
+	    <a class ="btn btn-primary" href="./list">리스트</a>
+	  </div>
 	</form>
-	</h3>
+   </div>
+   <c:import url="../template/common_js.jsp"></c:import>
+   
 </body>
 </html>

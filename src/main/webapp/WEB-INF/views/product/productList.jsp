@@ -7,9 +7,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Product List</title>
+   <c:import url="../template/common_css.jsp"></c:import>
+      <link rel="stylesheet" href="/resources/css/table.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 <body>
+  <c:import url="../template/header.jsp"></c:import>
 	<h1>Product List</h1>
 	<div class="col-8">
 	<table class="table table-hover">

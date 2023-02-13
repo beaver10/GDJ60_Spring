@@ -8,6 +8,7 @@
   <select id="getBankbookList" resultType="BankbookDTO">
   SELECT BOOKNUMBER, BOOKNAME, BOOKRATE, BOOKSALE, BOOKDETAIL
   FROM BANKBOOK
+  ORDER BY BOOKNUMBER DESC
 
   </select>
   
