@@ -57,17 +57,6 @@
           <label class="form-label" for="email"  style="margin-left: 0px;">Email</label>
         <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 88.8px;"></div><div class="form-notch-trailing"></div></div></div>
 		
-			
-        <!-- 2 column grid layout for inline styling -->
-<!--         <div class="row mb-4">
-          <div class="col d-flex justify-content-center">
-            Checkbox
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked="">
-              <label class="form-check-label" for="form1Example3"> Remember me </label>
-            </div>
-          </div>
-        </div> -->
 
         <!-- Submit button -->
         <button type="submit" class="btn btn-primary btn-block">Join in</button>
@@ -77,17 +66,6 @@
   </section>
   </div>
 
-	<!-- <div class = "col-3">
-	
-		<form action="./memberJoin" method="post">
-			아이디 : <input type="text" name="id"><br>
-			비밀번호 : <input type="password" name="pw"><br>
-			이름 : <input type="text" name="memberName"><br>
-			핸드폰 번호 : <input type="text" name="memberPhone"><br>
-			이메일 : <input type="email" name="email"><br>
-			<button type="submit">전송</button><br>
-		</form>
-	</div> -->
 <c:import url="../template/common_js.jsp"></c:import>
 	
 </body>

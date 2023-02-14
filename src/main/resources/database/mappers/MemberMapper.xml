@@ -10,9 +10,9 @@
   	VALUES (#{id}, #{pw}, #{memberName}, #{memberPhone}, #{email})
   </insert>
   
-  <insert id="" parameterType="MemberDTO">
-  INSERT INTO MEMBER_ROLL (ID, ROLENUM)
-  VALUES (#{id}, SELETE ROLENUM FROM ROLE WHERE ROLENAME='MEMBER')
+  <insert id="setMemberRoleAdd" parameterType="MemberDTO">
+  	INSERT INTO MEMBER_ROLE
+ 	VALUES (#{id}, (SELECT ROLENUM FROM ROLE WHERE ROLENAME='MEMBER'))
   </insert>
   
   

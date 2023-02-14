@@ -21,19 +21,13 @@
 		<tbody>
 			<c:forEach items="${list}" var="dto">
 				<tr>
-					<td><a href="./멤버 아이디 클릭하면 디테일 만들어야함"</a>
+					<td>${dto.memberId}</td>
 					<td>${dto.memberName}</td>
 					<td>${dto.memberEmail}</td>
 				</tr>
 			</c:forEach>
 		</tbody>
 	</table>
-	
-	
-	
-	
-	
-	
 	
 	
 	</div>
