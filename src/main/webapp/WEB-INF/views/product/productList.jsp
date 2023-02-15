@@ -16,6 +16,7 @@
 	<h1>Product List</h1>
 	<div class="col-8">
 	<table class="table table-hover">
+	
 		<thead>
 			<tr>
 				<th>상품번호</th><th>상품이름</th><th>상품평점</th>
@@ -32,6 +33,30 @@
 			</c:forEach>
 		</tbody>
 	</table>
+			<div class = "row">
+				<nav aria-label="Page navigation example">
+				  <ul class="pagination">
+				    <li class="page-item ${pager.before? 'disabled' : '' } ">
+				      <a class="page-link" href="./list?page=${pager.startNum-1 }" aria-label="Previous">
+				        <span aria-hidden="true">&laquo;</span>
+				      </a>
+				    </li>
+				    <c:forEach begin="${pager.startNum}" end="${pager.lastNum}" var="i" >
+				    <li class="page-item"><a class="page-link" href="./list?page=${i}">${i}</a></li>				    
+				    </c:forEach>
+				    <li class="page-item ${pager.after eq false ? 'disabled':'' } ">
+				
+				      <a class="page-link" href="./list?page=${pager.lastNum+1 }"  aria-label="Next">
+				        <span aria-hidden="true">&raquo;</span>
+				      </a>
+				    </li>
+				  </ul>
+				</nav>
+				<!-- for(int i = 1 ; i<=??; i++){i} -->
+				<!--<c:forEach begin="${pager.startNum}" end="${pager.lastNum}" step="1" var="i">
+					<a href="./list?page=${i}"> ${i} </a>
+				</c:forEach> -->
+			</div>
 		<a class="btn btn-danger" href="./productAdd">상품 등록</a>
 	</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>

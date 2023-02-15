@@ -42,7 +42,7 @@
 	</div>
   
   <div>
-  	<h1>${member.memberName}</h1>
+  	<h1>${member.id}</h1>
   
   </div>
   

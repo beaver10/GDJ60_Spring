@@ -18,7 +18,7 @@
   <select id="getMemberLogin" parameterType="MemberDTO" resultType="MemberDTO">
   	SELECT *
   	FROM MEMBER 
-  	WHERE ID  = #{id} AND PW = #{pw}
+  	WHERE ID  = #{id} 
   </select>
   
   <update id="setMemberUpdate" parameterType="MemberDTO">

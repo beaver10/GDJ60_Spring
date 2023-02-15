@@ -29,20 +29,20 @@
  
  		<!-- Name input -->
 		 <div class="form-outline mb-4">
-          <input type="text" id="memberName" class="form-control" name="memberName" >
+          <input type="text" id="memberName" class="form-control" name="memberName" value="${dto.memberName }" >
           <label class="form-label" for="memberName" style="margin-left: 0px;">Name</label>
         <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 88.8px;"></div><div class="form-notch-trailing"></div></div></div>
 		
 		 <!-- Phone input -->
  		<div class="form-outline mb-4">
-          <input type="text" id="memberPhone" class="form-control" name="memberPhone">
+          <input type="text" id="memberPhone" class="form-control" name="memberPhone" value="${dto.memberPhone }">
           <label class="form-label" for="memberPhone"  style="margin-left: 0px;">Phone</label>
         <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 88.8px;"></div><div class="form-notch-trailing"></div></div></div>
 			
 
 		 <!-- Email input -->
  		<div class="form-outline mb-4">
-          <input type="email" id="email" class="form-control" name="email">
+          <input type="email" id="email" class="form-control" name="email" value="${dto.email }">
           <label class="form-label" for="email"  style="margin-left: 0px;">Email</label>
         <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 88.8px;"></div><div class="form-notch-trailing"></div></div></div>
 		

@@ -16,7 +16,7 @@ public class ProductDAOTest extends MyTestCase {
 	
 	@Test
 	public void getProductListTest() throws Exception {
-		List<ProductDTO> ar = productDAO.getProductList();
+		List<ProductDTO> ar = productDAO.getProductList(null);
 		//단정문
 		assertNotEquals(0, ar.size());
 	}

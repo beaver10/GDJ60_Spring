@@ -46,6 +46,30 @@
 					</c:forEach>
 				</tbody>
 			</table>
+			<div class = "row">
+				<nav aria-label="Page navigation example">
+				  <ul class="pagination">
+				    <li class="page-item ${pager.before? 'disabled' : '' } ">
+				      <a class="page-link" href="./list?page=${pager.startNum-1 }" aria-label="Previous">
+				        <span aria-hidden="true">&laquo;</span>
+				      </a>
+				    </li>
+				    <c:forEach begin="${pager.startNum}" end="${pager.lastNum}" var="i" >
+				    <li class="page-item"><a class="page-link" href="./list?page=${i}">${i}</a></li>				    
+				    </c:forEach>
+				    <li class="page-item ${pager.after eq false ? 'disabled':'' } ">
+				
+				      <a class="page-link" href="./list?page=${pager.lastNum+1 }"  aria-label="Next">
+				        <span aria-hidden="true">&raquo;</span>
+				      </a>
+				    </li>
+				  </ul>
+				</nav>
+				<!-- for(int i = 1 ; i<=??; i++){i} -->
+				<!--<c:forEach begin="${pager.startNum}" end="${pager.lastNum}" step="1" var="i">
+					<a href="./list?page=${i}"> ${i} </a>
+				</c:forEach> -->
+			</div>
 		<br><br>
 		</div>
 		<div class = "row col-md-7 mx-auto">

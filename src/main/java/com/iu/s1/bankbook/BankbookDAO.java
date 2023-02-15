@@ -6,6 +6,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.iu.s1.util.Pager;
+
 @Repository
 public class BankbookDAO {
 	
@@ -13,9 +15,15 @@ public class BankbookDAO {
 	private SqlSession sqlSession;
 	private final String NAMESPACE ="com.iu.s1.bankbook.BankbookDAO.";
 	
+	
+	public Long getBankbookCount() {
+		return sqlSession.selectOne(NAMESPACE+"getBankbookCount");
+	}
+	
+	
 	//select
-	public List<BankbookDTO> getBankbookList() throws Exception{
-		return sqlSession.selectList(NAMESPACE+"getBankbookList");
+	public List<BankbookDTO> getBankbookList(Pager pager) throws Exception{
+		return sqlSession.selectList(NAMESPACE+"getBankbookList", pager);
 	}
 	
 	//select
