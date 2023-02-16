@@ -30,14 +30,20 @@
     		<label for="bookRate" class="form-label">이자율</label>
     		<input type="text" class="form-control" id="bookRate" name="bookRate">
   		</div>
-  		<div class="col-11">
+  		<div class="col-12">
     		<label for="bookDetail" class="form-label">상품 설명</label>
     		<input type="text" class="form-control" id="bookDetail" name="bookDetail" placeholder="간단한 설명">
+  		</div>
+		<div class="col-12">
+    		<label for="files" class="form-label">이미지 첨부</label>
+    		<input type="file" class="form-control" id="files" name="pic">
   		</div>
   		<div class="form-check form-switch ms-2 my-4">
  			<input class="form-check-input" type="checkbox" role="switch" id="bookSale" name="bookSale" value="1" checked>
   			<label class="form-check-label" for="bookSale" >판매여부</label>
 		</div>
+		
+		
 
 	  <div class="col-12">
 	    <button type="submit" class="btn btn-primary">등록</button>

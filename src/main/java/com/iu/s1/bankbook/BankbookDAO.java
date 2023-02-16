@@ -16,8 +16,8 @@ public class BankbookDAO {
 	private final String NAMESPACE ="com.iu.s1.bankbook.BankbookDAO.";
 	
 	
-	public Long getBankbookCount() {
-		return sqlSession.selectOne(NAMESPACE+"getBankbookCount");
+	public Long getBankbookCount(Pager pager) {
+		return sqlSession.selectOne(NAMESPACE+"getBankbookCount", pager);
 	}
 	
 	
