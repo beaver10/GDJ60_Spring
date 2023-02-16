@@ -2,10 +2,16 @@ package com.iu.s1.bankbook;
 
 import java.util.List;
 
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttribute;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.iu.s1.product.ProductDTO;
@@ -37,6 +43,7 @@ public class BankbookController {
 		bankbookDTO = bankbookService.getBankbookDetail(bankbookDTO);
 		mv.setViewName("bankbook/detail");
 		mv.addObject("dto", bankbookDTO);
+		
 		return mv;
 	}
 	
@@ -49,9 +56,16 @@ public class BankbookController {
 	
 	//add DB insert
 	@RequestMapping(value = "add", method = RequestMethod.POST)
-	public ModelAndView setBankbookAdd(BankbookDTO bankbookDTO) throws Exception {
+	public ModelAndView setBankbookAdd(BankbookDTO bankbookDTO, MultipartFile pic, HttpSession session) throws Exception {
 		ModelAndView mv = new ModelAndView();
-		int result = bankbookService.setBankbookAdd(bankbookDTO);
+		
+		System.out.println("Name : "+pic.getName());
+		System.out.println("Ori Name : "+pic.getOriginalFilename());
+		System.out.println("size : "+pic.getSize());
+		System.out.println(session.getServletContext());
+		
+		int result = bankbookService.setBankbookAdd(bankbookDTO, pic);
+		
 		mv.setViewName("redirect: ./list");
 		return mv;
 	}

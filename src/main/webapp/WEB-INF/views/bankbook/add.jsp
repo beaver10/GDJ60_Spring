@@ -21,7 +21,7 @@
 	<div class = "mb-3"></div>
 	</h1>
 	</div>
-	<form class = "row g-3 ms-auto" action="./add" method="post">
+	<form class = "row g-3 ms-auto" action="./add" method="post" enctype="multipart/form-data">
 		<div class ="col-md-6">
 			<label for="bookName" class="form-label">상품명</label>
   			<input type="text" class="form-control" id="bookName" name="bookName">
