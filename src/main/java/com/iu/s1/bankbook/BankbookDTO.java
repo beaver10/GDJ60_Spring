@@ -7,9 +7,16 @@ public class BankbookDTO {
 	private Double bookRate;
 	private Integer bookSale;
 	private String bookDetail;
+	private BankbookImgDTO bankbookImgDTO;
 	
 	
 	
+	public BankbookImgDTO getBankbookImgDTO() {
+		return bankbookImgDTO;
+	}
+	public void setBankbookImgDTO(BankbookImgDTO bankbookImgDTO) {
+		this.bankbookImgDTO = bankbookImgDTO;
+	}
 	public Long getBookNumber() {
 		return bookNumber;
 	}

@@ -59,9 +59,34 @@
 	WHERE R BETWEEN #{startRow} and #{lastRow}
   </select>
   
-  <select id="getBankbookDetail" parameterType="BankbookDTO" resultType="BankbookDTO">
-  SELECT * FROM BANKBOOK WHERE BOOKNUMBER=#{bookNumber}
+  <select id="getBankbookDetail" parameterType="BankbookDTO" resultMap="bankbookDetailResult">
+<!--   SELECT * FROM BANKBOOK WHERE BOOKNUMBER=#{bookNumber} -->
+ 	SELECT *
+	FROM BANKBOOK B
+	LEFT OUTER JOIN BANKBOOKIMG BI 
+	ON (BI.BOOKNUMBER=B.BOOKNUMBER)
+	WHERE B.BOOKNUMBER = #{bookNumber}
   </select>
+  
+  <resultMap type="BankbookDTO" id="bankbookDetailResult">
+  	<!-- Primary Key / 프로퍼티에는 새터의 이름-->
+  	<id column="BOOKNUMBER" property="bookNumber"/>
+  	<!-- 그외 나머지 -->
+  	<result column="BOOKNAME" property="bookName"/>
+  	<result column="BOOKDETAIL" property="bookDetail"/>
+  	<result column="BOOKRATE" property="bookRate"/>
+  	<result column="BOOKSALE" property="bookSale"/>
+  	<!-- 1:1 관계에서는 어소시에이트 / 이것 먼저 써야함-->
+  	<association property="bankbookImgDTO" javaType="BankbookImgDTO">
+  		<id column="FILENUM" property="fileNum"/>
+  		<result column="FILENAME" property="fileName"/>
+  		<result column="ORINAME" property="oriName"/>
+  	</association>
+  	<!-- 1:N 관계에서는 콜렉션 
+  	<collection property=""></collection>-->
+
+  	</resultMap>
+  
   
   <insert id="setBankbookAdd" parameterType="BankbookDTO">
   	<selectKey keyProperty="bookNumber" resultType="Long" order="BEFORE">

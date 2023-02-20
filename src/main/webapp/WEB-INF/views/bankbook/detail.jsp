@@ -16,11 +16,17 @@
 			<h3>상품명 : ${dto.bookName}</h3>
 			<h3>이자율 : ${dto.bookRate}</h3>
 			<h3>설명 : ${dto.bookDetail}</h3>
+			<div>
+				<c:if test="${not empty dto.bankbookImgDTO }">
+					<img src="../resources/upload/bankbook/${dto.bankbookImgDTO.fileName }">
+				</c:if>
+			</div>
 			<h3>판매여부 : 
 			<c:choose>
 				<c:when test="${dto.bookSale eq 1}">판매중</c:when>
 				<c:otherwise>판매중단</c:otherwise>
 			</c:choose>
+			</h3>
 		<br><br>
 		<button><a href="./add">상품 등록</a></button>
 		<button><a href="./delete?bookNumber=${dto.bookNumber}">상품 삭제</a></button>
