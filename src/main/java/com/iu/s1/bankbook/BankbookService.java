@@ -19,7 +19,7 @@ public class BankbookService {
 	
 	//testCase 테스트시 Null이 들어옴
 	//API 추가해야함
-	@Autowired
+	//@Autowired
 	private ServletContext servletContext;
 	
 	@Autowired
