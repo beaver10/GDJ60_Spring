@@ -34,10 +34,15 @@
     		<label for="bookDetail" class="form-label">상품 설명</label>
     		<input type="text" class="form-control" id="bookDetail" name="bookDetail" placeholder="간단한 설명">
   		</div>
-		<div class="col-12">
-    		<label for="files" class="form-label">이미지 첨부</label>
-    		<input type="file" class="form-control" id="files" name="pic">
-  		</div>
+		<div id="fileList">
+			<!-- <div class="col-12">
+				<label for="files" class="form-label">이미지 첨부</label>
+				<input type="file" class="form-control" id="files" name="pic">
+			</div> -->
+			<br>
+			<button type="button" class="btn btn-outline-primary"  id="add">ADD</button>
+		</div>
+
   		<div class="form-check form-switch ms-2 my-4">
  			<input class="form-check-input" type="checkbox" role="switch" id="bookSale" name="bookSale" value="1" checked>
   			<label class="form-check-label" for="bookSale" >판매여부</label>
@@ -51,6 +56,11 @@
 	  </div>
 	</form>
    </div>
+   <script src="/resources/js/fileManager.js"></script>
+   <script>
+	 setMax(3);
+	 setName('pic');
+   </script>
    <c:import url="../template/common_js.jsp"></c:import>
    
 </body>
