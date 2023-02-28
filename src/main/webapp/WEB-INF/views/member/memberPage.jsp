@@ -24,15 +24,15 @@
 			<form>
 					<div class="form-group">
 						<label>이름</label>
-						<input type="text" class="form-control" value="${dto.memberName}">
+						<input type="text" class="form-control" value="${dto.memberName}"disabled="disabled">
 					</div>
 					<div class="form-group">
 						<label>전화번호</label>
-						<input type="text" class="form-control" value="${dto.memberPhone}">
+						<input type="text" class="form-control" value="${dto.memberPhone}" disabled="disabled">
 					</div>
 					<div class="form-group">
 						<label>이메일</label>
-						<input type="text" class="form-control" value="${dto.email}">
+						<input type="text" class="form-control" value="${dto.email}" disabled="disabled">
 					</div>
 					<br>
 					<a href="./memberUpdate"  button type="submit" class="btn btn-primary">수정하기</a>
