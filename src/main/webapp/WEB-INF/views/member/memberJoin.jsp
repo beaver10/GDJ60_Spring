@@ -53,7 +53,7 @@
                 <!-- Password input -->
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form1Example2" style="margin-left: 0px;">Password 확인</label>
-                  <input type="password" id="pw2" class="form-control" name="pw">
+                  <input type="password" id="pw2" class="form-control" name="pw2">
                   <div id="pw2Error" class="redResult"></div>
                   <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64.8px;"></div><div class="form-notch-trailing"></div></div></div>
                   
@@ -79,7 +79,7 @@
                 
                 
                 <!-- Submit button -->
-                <button type="button" class="btn btn-primary btn-block" id="btn">Join in</button>
+                <button type="submit" class="btn btn-primary btn-block" id="btn">Join in</button>
               </form>
             </section>
           </div>

@@ -34,6 +34,10 @@
 						<label>이메일</label>
 						<input type="text" class="form-control" value="${dto.email}" disabled="disabled">
 					</div>
+					<div class="form-group">
+						<label>회원등급</label>
+						<input type="text" class="form-control" value="${dto.roleDTO.roleName}" disabled="disabled">
+					</div>					
 					<br>
 					<a href="./memberUpdate"  button type="submit" class="btn btn-primary">수정하기</a>
 					
