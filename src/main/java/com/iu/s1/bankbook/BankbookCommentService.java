@@ -29,7 +29,11 @@ public class BankbookCommentService implements BbsService {
 		return bankbookCommentDAO.getBoardList(pager);
 	}
 
-
+	@Override
+	public int setBoardAdd(BbsDTO bbsDTO) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 	@Override
 	public int setBoardUpdate(BbsDTO bbsDTO) throws Exception {
