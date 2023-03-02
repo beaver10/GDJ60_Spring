@@ -2,6 +2,8 @@ package com.iu.s1.bankbook;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,11 +29,7 @@ public class BankbookCommentService implements BbsService {
 		return bankbookCommentDAO.getBoardList(pager);
 	}
 
-	@Override
-	public int setBoardAdd(BbsDTO bbsDTO) throws Exception {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+
 
 	@Override
 	public int setBoardUpdate(BbsDTO bbsDTO) throws Exception {
@@ -40,7 +38,7 @@ public class BankbookCommentService implements BbsService {
 	}
 
 	@Override
-	public int setBoardDelete(BbsDTO bbsDTO) throws Exception {
+	public int setBoardDelete(BbsDTO bbsDTO, HttpSession httpSession) throws Exception {
 		// TODO Auto-generated method stub
 		return 0;
 	}
