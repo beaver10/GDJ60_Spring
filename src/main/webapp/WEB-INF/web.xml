@@ -36,6 +36,13 @@
     <url-pattern>/qna/*</url-pattern>
   </filter-mapping>
    -->
+   
+<!--    404는 exceptionController에서 안됨 여기서 해줘야함	-->
+   	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/views/common/error_400.jsp</location>
+	</error-page>
+   
   <context-param>
     <param-name>contextConfigLocation</param-name>
     <param-value>/WEB-INF/spring/*-context.xml</param-value>

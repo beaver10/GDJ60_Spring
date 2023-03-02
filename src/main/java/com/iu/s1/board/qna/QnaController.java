@@ -6,6 +6,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -147,7 +148,26 @@ public class QnaController {
 		return mv;
 	}
 	
+	//------------------------------------------
 	
-	
+//	@ExceptionHandler(NullPointerException.class)
+//	public ModelAndView fixException() {
+//		ModelAndView mv = new ModelAndView();
+//		mv.addObject("message", "잘못된 접근입니다<br> 관리자에게 문의하세요");
+//		mv.setViewName("common/error_500");
+//		
+//		return mv;
+//		
+//	}
+//	
+//	@ExceptionHandler(Exception.class)
+//	public ModelAndView fix2Exception() {
+//		ModelAndView mv = new ModelAndView();
+//		mv.addObject("message", "잘못된 접근입니다<br> 관리자에게 문의하세요");
+//		mv.setViewName("common/error_500");
+//		
+//		return mv;
+//		
+//	}
 	
 }
