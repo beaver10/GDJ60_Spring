@@ -23,7 +23,7 @@
 		
 		
 		
-		<c:if test="${member.id eq dto.writer}">
+<%-- 		<c:if test="${member.id eq dto.writer}"> --%>
 			<div>
 				<form action="./update" id="frm">
 					<c:if test="${boardName ne 'notice'}">
@@ -34,7 +34,7 @@
 					<button id="delete" type="button" class="btn btn-info">DELETE</button>
 				</form>
 			</div>
-		</c:if>
+<%-- 		</c:if> --%>
 		
 		
 	</div>
