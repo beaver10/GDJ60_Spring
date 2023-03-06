@@ -37,17 +37,20 @@
 			<exclude-mapping path="/qna/list"/>
 			<exclude-mapping path="/member/memberLogin"/>
 			<exclude-mapping path="/member/memberAgree"/>
+			<exclude-mapping path="/member/memberJoin"/>
+			<exclude-mapping path="/member/memberIdCheck"/>
 			<beans:ref bean="memberCheckInterceptor"/>
 		</interceptor>
 		
-		<interceptor>
+<!-- 		<interceptor>
 			<mapping path="/notice/*"/>
 			<exclude-mapping path="/notice/list"/>
 			<exclude-mapping path="/notice/detail"/>
+			<exclude-mapping path="/notice/listTop"/>
 			<beans:ref bean="adminCheckInterceptor"/>
-<!-- 			<beans:bean class="com.iu.s1.interceptors.AdminCheckInterceptor"></beans:bean>-->
-<!-- 			<beans:ref bean="adminCheckInterceptor"/>  -->		
-		</interceptor>
+			<beans:bean class="com.iu.s1.interceptors.AdminCheckInterceptor"></beans:bean>
+			<beans:ref bean="adminCheckInterceptor"/> 		
+		</interceptor> -->
 		
 		<interceptor>
 			<mapping path="/qna/update"/>

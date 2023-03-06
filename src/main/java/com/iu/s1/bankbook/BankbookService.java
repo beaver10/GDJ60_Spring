@@ -61,6 +61,8 @@ public class BankbookService {
 	
 	
 	public int setBankbookDelete(BankbookDTO bankbookDTO)throws Exception{
+		
+		
 		return bankbookDAO.setBankbookDelete(bankbookDTO);
 	}
 

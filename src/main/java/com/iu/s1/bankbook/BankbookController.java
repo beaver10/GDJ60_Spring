@@ -58,11 +58,11 @@ public class BankbookController {
 	@RequestMapping(value = "add", method = RequestMethod.POST)
 	public ModelAndView setBankbookAdd(BankbookDTO bankbookDTO, MultipartFile pic, HttpSession session) throws Exception {
 		ModelAndView mv = new ModelAndView();
-		
-		System.out.println("Name : "+pic.getName());
-		System.out.println("Ori Name : "+pic.getOriginalFilename());
-		System.out.println("size : "+pic.getSize());
-		System.out.println(session.getServletContext());
+//		
+//		System.out.println("Name : "+pic.getName());
+//		System.out.println("Ori Name : "+pic.getOriginalFilename());
+//		System.out.println("size : "+pic.getSize());
+//		System.out.println(session.getServletContext());
 		
 		int result = bankbookService.setBankbookAdd(bankbookDTO, pic);
 		

@@ -16,15 +16,15 @@
   </insert>
   
   <select id="getMemberLogin" parameterType="MemberDTO" resultMap="getMemberLoginResult">
-		 SELECT m.*, r.*
-		 FROM MEMBER m
+	SELECT m.*, r.*
+	FROM MEMBER m
 		 INNER JOIN 
 		 MEMBER_ROLE mr
 		 ON (m.ID = mr.ID)
 		 INNER JOIN 
 		 ROLE r 
 		 ON (mr.ROLENUM =r.ROLENUM)
-		 WHERE m.ID = #{id}
+	WHERE m.ID = #{id}
   </select>
   <resultMap type="memberDTO" id="getMemberLoginResult">
   	<id column="id" property="id"/>
