@@ -7,6 +7,8 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <c:import url="../template/common_css.jsp"></c:import>
+ <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 
 </head>
 <body>
@@ -32,7 +34,7 @@
 	
 			<div class="mb-3">
 			  <label for="contents" class="form-label">내용</label>
-			  <textarea name="contents" class="form-control" id="contents" placeholder="내용 입력" rows="7"></textarea>
+			  <textarea name="contents" class="form-control" id="contents" ></textarea>
 			</div>
 			
 			<div id="fileList" class="my-5">
@@ -51,11 +53,12 @@
 	</div>
 </div>
 
-<script src="../../../resources/js/fileManager.js"></script>
+<script src="/resources/js/fileManager.js"></script>
+<c:import url="../template/common_js.jsp"></c:import>
 <script>
 	setMax(5);
-	setParam('files');
+	setParam('addFiles');
+	 $('#contents').summernote();
 </script>
-<c:import url="../template/common_js.jsp"></c:import>
 </body>
 </html>

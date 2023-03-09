@@ -55,7 +55,7 @@
 <script src="../../../resources/js/fileManager.js"></script>
 <script>
 	setMax(3);
-	setParam('files');
+	setParam('addFiles');
 </script>
 <c:import url="../template/common_js.jsp"></c:import>
 </body>

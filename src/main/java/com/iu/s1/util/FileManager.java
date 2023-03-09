@@ -26,7 +26,7 @@ public class FileManager {
 		//2. 저장관리는 운영체제가 담당
 		File file = new File(path);
 		
-		
+		System.out.println("파일저장");
 		
 		//폴더가 존재하지 않으면 폴더 생성
 		if(!file.exists()) {

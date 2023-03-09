@@ -4,6 +4,9 @@ public class Pager {
 	
 	private Long bookNumber;
 	
+	private Long num;
+
+	
 	//검색 종류 (사용할 column)
 	private String kind;
 	//검색어
@@ -37,6 +40,14 @@ public class Pager {
 	private boolean after;
 	
 	
+	public Long getNum() {
+		return num;
+	}
+
+	public void setNum(Long num) {
+		this.num = num;
+	}
+
 	public Pager() {
 		this.perPage=10L;
 	}
@@ -67,7 +78,7 @@ public class Pager {
 		
 		//4.총 블럭의 수 구하기
 		Long totalBlock = totalPage/this.getPerBlock();
-		if(totalPage%perBlock!=0) {
+		if(totalPage%this.getPerBlock()!=0) {
 			totalBlock++;
 		}
 		

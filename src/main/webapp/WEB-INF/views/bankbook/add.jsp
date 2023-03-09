@@ -8,8 +8,9 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
    <c:import url="../template/common_css.jsp"></c:import>
-      <link rel="stylesheet" href="/resources/css/table.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+          <!-- include summernote css/js-->
+    <link href="summernote-bs5.css" rel="stylesheet">
+    <script src="summernote-bs5.js"></script>
 </head>
 <body>
   <c:import url="../template/header.jsp"></c:import>
@@ -32,8 +33,11 @@
   		</div>
   		<div class="col-12">
     		<label for="bookDetail" class="form-label">상품 설명</label>
-    		<input type="text" class="form-control" id="bookDetail" name="bookDetail" placeholder="간단한 설명">
+    		<textarea class="form-control" id="bookDetail" name="bookDetail" ></textarea>
   		</div>
+  	
+  		
+  		
 		<div id="fileList">
 			<!-- <div class="col-12">
 				<label for="files" class="form-label">이미지 첨부</label>
@@ -57,11 +61,12 @@
 	</form>
    </div>
    <script src="/resources/js/fileManager.js"></script>
+   <c:import url="../template/common_js.jsp"></c:import>
    <script>
 	 setMax(3);
-	 setName('pic');
+	 $('#bookDetail').summernote();
+	 //setName('pic');
    </script>
-   <c:import url="../template/common_js.jsp"></c:import>
    
 </body>
 </html>
