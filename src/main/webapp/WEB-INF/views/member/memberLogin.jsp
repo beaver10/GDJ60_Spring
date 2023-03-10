@@ -28,7 +28,7 @@
       <form action="./memberLogin" method="post" style="width: 22rem;">
         <!-- id input -->
         <div class="form-outline mb-4">
-          <input type="text" id="id" class="form-control" name="id">
+          <input type="text" id="id" class="form-control" name="id" value="${cookie.rememberId.value}">
           <label class="form-label" for="id"  style="margin-left: 0px;">ID</label>
         <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 88.8px;"></div><div class="form-notch-trailing"></div></div></div>
 
@@ -37,6 +37,13 @@
           <input type="password" id="pw" class="form-control" name="pw">
           <label class="form-label" for="form1Example2" style="margin-left: 0px;">Password</label>
         <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64.8px;"></div><div class="form-notch-trailing"></div></div></div>
+        <!-- Checkbox -->
+            <div class="form-check">
+              <input class="form-check-input" name="remember" type="checkbox" value="remember" id="form1Example3" checked="">
+              <label class="form-check-label" for="form1Example3"> Remember me </label>
+            </div>
+          </div>
+        
 	        <!-- Submit button -->
         <button type="submit" class="btn btn-primary btn-block">Login</button>
 	
